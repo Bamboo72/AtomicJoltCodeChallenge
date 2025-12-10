@@ -1,6 +1,6 @@
 # Atomic Jolt Code Challenge
 By Jacob Schwartz
-12/9/2025
+Project mostly created on 12/9/2025
 
 ## How to Run the Project Locally
 This project is built using Vite. If you know how to run a Vite project, you can skip this section. Otherwise, follow these steps (which were created by Google Gemini):
@@ -38,19 +38,19 @@ Run this script using npm:
 5. **View the Project:** Open your web browser and navigate to the address provided in the terminal (e.g., http://localhost:5173/) to see your project running. 
 
 ## Resources used
-Vite for project setup: https://vitejs.dev/
-Vue 3 for frontend framework: https://vuejs.org/
-Vitest for testing: https://vitest.dev/
-
-https://pokeapi.co/ for Pokémon data API - I only used the /pokemon endpoint, getting different lists based on name or id.
+- Vite for project setup: https://vitejs.dev/
+- Vue 3 for frontend framework: https://vuejs.org/
+- Vitest for testing: https://vitest.dev/
+- Draw.io aka diagrams.net for quick mockup: https://app.diagrams.net/
+- https://pokeapi.co/ for Pokémon data API - I only used the /pokemon endpoint, getting different lists based on name or id.
 
 ### My process using AI:
 I used GitHub Copilot (Agent mode - Claude Sonnet 4.5) and Google Gemini in Google for quick searches on how to do specific things.
 
-I used a PRD that I created called PRD.txt to inform the AI on my vision for the project. Then I used GitHub Copilot to create components, write code and test, and help debug issues.
+I used a PRD that I created called [PRD.txt](PRD.txt) to inform the AI on my vision for the project. Then I used GitHub Copilot to create components, write code and test, and help debug issues.
 Normally, I would like to take more time and write the code myself, but since the project time limit is 2 to 3 hours, I wanted to leverage AI to help me achieve my vision within the time limit.
 
-I wanted to be transparent about my use of AI, so I've included the two whole chat threads I used for this project in res/CopilotChat1.md and res/CopilotChat2.md
+I wanted to be transparent about my use of AI, so I've included the two whole chat threads I used for this project in [res/CopilotChat1.md](res/CopilotChat1.md) and [res/CopilotChat2.md](res/CopilotChat2.md)
 
 
 ## My Process
@@ -89,9 +89,9 @@ Did some brainstorming, but most of my time went to higher priorities at the tim
 ### 12/9/2025
 Finally had the time to prioritize this project. 
 
-**6:25 - 6:45 PM:** Created the Vite project, started looking more at the API, decided I needed a better vision for the layout, so I made a quick Draw.io sketch of the app layout. (res/QuickMockup.png) I decided I'll really leverage Copilot for this project so I can achieve my vision.
+**6:25 - 6:45 PM:** Created the Vite project, started looking more at the API, decided I needed a better vision for the layout, so I made a quick Draw.io sketch of the app layout. ([res/QuickMockup.png](res/QuickMockup.png)) I decided I'll really leverage Copilot for this project so I can achieve my vision.
     
-**6:55 - 7:50 PM:** I found the APIs I wanted to use, and then wrote up a Project Requirements Document (PRD.txt) so I could communicate the project vision clearly to Copilot, and had it create the components and basic layout of the app - All of the requirements are now in place (in just under an hour), and now I can focus on polish and achieving my vision for the project. Looking at what it made, I see there's clear steps to move forward.
+**6:55 - 7:50 PM:** I found the APIs I wanted to use, and then wrote up a Project Requirements Document ([PRD.txt](PRD.txt)) so I could communicate the project vision clearly to Copilot, and had it create the components and basic layout of the app - All of the requirements are now in place (in just under an hour), and now I can focus on polish and achieving my vision for the project. Looking at what it made, I see there's clear steps to move forward.
 
 **8:50 - 9:38 PM:** Back from dinner, ready to keep going. Here's the list of things to do next (I think I'll try working manually for a while now, and if I get stuck, I'll ask Copilot for help):
     - Familiarize myself with the code that Copilot wrote
