@@ -1,0 +1,66 @@
+# PRD for Atomic Jolt Coding Challenge
+## Requirements Overview
+This is a coding challenge as part of an interview for Atomic Jolt.
+We were told "Use every resource you have, including AI. If you use please include in your README your process."
+
+Here's the instructions:
+"Thank you for your interest in joining the team as a developer intern. We were impressed with your background and would like to invite you to the next stage of our interview process. The following are some options that allow you to demonstrate your strengths in the area you are most passionate about. We don't expect this to take more than 2 to 3 hours. We are looking for quality and pragmatism, not perfection."
+"Tech Stack: You may use any programming language, framework, or library you are comfortable with. We want to see you using the tools you know best."
+
+"Step 1: Choose Your Data Source Pick one public API to use for your project:"
+    I chose to use The Pokémon API: https://pokeapi.co/
+
+
+"Step 2: Choose one of the options below best aligns with your skillset:"
+    I chose to do Option A: Frontend Focus
+
+    "Goal: Build a responsive web application that fetches and displays data directly from your chosen API.
+
+    Requirements:
+        Search/Filter: Create a search bar that filters results (e.g., by Name or Type).
+        UI/UX: Use a clean, responsive layout (Cards, Grids, or Lists).
+        State: Handle loading states (spinners) and error messages gracefully."
+
+## The Plan
+My vision is to create a made-up Canvas plugin called "Atomic Pokedex".
+It will enable the user to learn more about Pokemon, and even take quizzes to test their knowledge.
+
+We will use a screenshot to make it look like it's in Canvas, and the interactive part is the actual Pokedex.
+I set up this Vue + Vite project, and we'll use this to run the project locally.
+I will provide the screenshot of Canvas (src/assets/CanvasBackground.png) as well as the APIs to use to fetch the data (for now, we'll just use GET https://pokeapi.co/api/v2/pokemon/{id or name}/), but I could use help making the structure of the project because I only have less than 3 hours to make it.
+
+### Layout
+The layout of the app will be like this:
+
+The information displayed for a single Pokemon will include:
+- A Pokedex vue component
+    - A Start quiz button that opens up the quiz panel
+    - A display vue component (this will either prompt the user to search and select a Pokemon, or display the image of the selected pokemon)
+    - A search bar (filters the Pokemon by name)
+    - A results vue (displays either cards that each have the Pokemon name and picture if in Card view, or simply a list of names if in List view)
+    - A set of radio buttons to change the view mode between Card and List
+- A QuizPanel vue component (Will be added as a stage 2 feature, so we can ensure the Pokedex vue component works completely first)
+
+
+## Testing
+I'm coming from a QA internship, and I would like to include a set of unit tests to make sure the functions of the app are all working.
+
+## Q&A - AI asks questions, developer answers
+Q: For the initial Pokemon list that populates the search results - should we fetch all Pokemon upfront (there are 1000+), paginate them, or start with a limited set (like the first 151 original Pokemon)?
+A: Let's paginate them - 30 Pokemon per page if it's on Card mode, or 100 per page if it's on List mode. We should also include buttons to navigate between pages at the bottom of the results.
+
+Q: When you mention "display the image of the selected pokemon" - should we show additional details like type, abilities, stats, height/weight, or just the image?
+A: I forgot to include that part - when a Pokemon is selected, we will switch the results vue to display details about the Pokemon, including their name, Pokemon number, types, height, and weight. We can add more info later.
+Also, the image can be obtained from the sprites node of the response body for a particular pokemon. I would like to display the "front_default" image of the "official-artwork" section which is under "other". The path is x.sprites.other["official-artwork"].front_default
+
+Q: For the Canvas background integration - should the Pokedex appear as an overlay/modal on top of the Canvas screenshot, or embedded within a specific area of the Canvas interface?
+A: It should appear as an overlay - the Canvas screenshot should be the background
+
+Q: What testing framework would you prefer for the unit tests? (Vitest is common with Vite projects, but I want to confirm your preference)
+A: Let's use Vitest, I used that recently on a school project so it's familiar
+
+Q: For error handling - if the API is down or a Pokemon search fails, what user experience do you envision (toast notification, inline error message, etc.)?
+A: We should show an error message in the display vue that tells the user "There's been an error, try again later"
+
+Q: Should the search filter results as you type (live search), or require the user to press enter/click a search button?
+A: It should be live
