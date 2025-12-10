@@ -2,6 +2,8 @@
 By Jacob Schwartz
 Project mostly created on 12/9/2025
 
+My vision: create a "Canvas Extension" that enables students to learn about and be tested on Pokemon - Everyone's favorite pocket monsters!
+
 ## How to Run the Project Locally
 This project is built using Vite. If you know how to run a Vite project, you can skip this section. Otherwise, follow these steps (which were created by Google Gemini):
 
